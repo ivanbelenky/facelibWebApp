@@ -33,7 +33,6 @@ dash-html-components==2.0.0
 dash-table==5.0.0
 dbus-python==1.2.16
 decorator==4.4.2
-defer==1.0.6
 defusedxml==0.6.0
 deprecation==2.1.0
 distlib==0.3.0

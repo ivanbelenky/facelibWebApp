@@ -5,16 +5,18 @@
     <title>Face detect</title>
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/drag.css')}}">
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/buttons.css')}}">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
-<body style="margin:100px;padding:50px">
+<body style="margin:100px;padding:50px; font-family: 'Roboto', sans-serif;">
 <center>
     <div class="container">
       <div class="row">
         <div class="col">
 
     <h1>Face Detect & A.G.E. estimation</h1>
-    <div>
+    <div >
       Upload any picture and predict age, gender, emotion of humans on it. The picture format or size can be whatever you please. On top of that check on the Face Detect, to inform yourself about the already trained NeuralNets that are being use to perform this actions. And on top of that why FaceDetection and landmarks are used to predict A.G.E.
       The picture can contain multiple faces or none. Detection, alignment, age&gender&emotion prediction will be done for all of them. 
       
