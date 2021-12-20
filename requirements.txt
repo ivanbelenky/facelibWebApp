@@ -19,7 +19,6 @@ certifi==2019.11.28
 cffi==1.14.5
 chardet==3.0.4
 clang==5.0
-cliapp==1.20180812.1
 click==7.1.2
 click-plugins==1.1.1
 cligj==0.7.1
