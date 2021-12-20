@@ -17,17 +17,17 @@ Issues building facelib on **heroku**, reason why this is not deployed publicly 
  They efficiently trade off between latency and accuracy, allowing the model builder to choose the right sized model for their application.
  
  
- ![picture alt](https://github.com/ivanbelenky/facelibWebApp/examples/face_detection.png )
+ ![picture alt](https://github.com/ivanbelenky/facelibWebApp/blob/master/examples/face_detect.png?raw=true )
  
  ### Face Markers ###
  
 Face markers indicate the position of both eyes (if visible), the tip of the nose and the left and right end of the mouth. 
 
- ![picture alt](https://github.com/ivanbelenky/facelibWebApp/examples/face_markers.png )
+  ![picture alt](https://github.com/ivanbelenky/facelibWebApp/blob/master/examples/face_markers.png?raw=true )
 
 ### A.G.E. (Age, Gender and Emotion) ###
 
 
- ![picture alt](https://github.com/ivanbelenky/facelibWebApp/examples/age.png )
+ ![picture alt](https://github.com/ivanbelenky/facelibWebApp/blob/master/examples/age.png?raw=true )
 
 
