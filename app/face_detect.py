@@ -10,16 +10,26 @@ def create_face_segregation_images(faces, route = "detection"):
 
     titles = [f"Face{i+1}" for i in range(faces.shape[0])]
     
-    fig = make_subplots( rows=1, cols=faces.shape[0], subplot_titles=titles)
+    if route == "A.G.E.":
+        fig = make_subplots( cols=1, rows=faces.shape[0], subplot_titles=titles)
+    else:
+        fig = make_subplots( rows=1, cols=faces.shape[0], subplot_titles=titles)
+
     fig.update_layout(title_text="Face Detection")
     fig.update_xaxes(showticklabels=False)
     fig.update_yaxes(showticklabels=False)
 
-    print(faces.shape)
     for i,face in enumerate(faces):    
-        fig.add_trace(px.imshow(face.detach().numpy()).data[0], row=1, col=i+1)
-
-    fig.update_layout(autosize=False, width=5*faces.shape[0]*100,height=400)
+        if route == "A.G.E.":
+            print(i)
+            fig.add_trace(px.imshow(face.detach().numpy()).data[0], col=1, row=i+1)
+        else:
+            fig.add_trace(px.imshow(face.detach().numpy()).data[0], row=1, col=i+1)
+    
+    if route == "A.G.E.":
+        fig.update_layout(autosize=False, height=5*faces.shape[0]*100,width=400)
+    else:
+        fig.update_layout(autosize=False, width=5*faces.shape[0]*100,height=400)
     
     #fig.write_image("testfacesegmentation.svg", engine='kaleido')
     if route == "A.G.E.":

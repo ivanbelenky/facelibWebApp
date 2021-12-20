@@ -7,29 +7,26 @@
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/buttons.css')}}">
 
 </head>
-<body style="margin:100px;padding:50px; font-family: 'Roboto', sans-serif;">
+<body style="margin:75px;padding:50px; font-family: 'Roboto', sans-serif;">
 <center>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-
-    <h1>A.G.E. </h1>
     <div>
-        
-
+        <h1>A.G.E.</h1>
+        <h2>Age Gender and Emotions</h2>     
+    
     </div>
           <hr>
 
-    
     <div>
-        <img src="{{ url_for('send_A_G_E_file', filename=face_segregation) }}" />
-    </div>
-    <div >
-        <img src="{{ url_for('send_A_G_E_file', filename=estimations) }}" />
+        <img src="{{ url_for('send_A_G_E_file', filename=face_segregation) }}" align="left" hspace="0" />
+        <img src="{{ url_for('send_A_G_E_file', filename=estimations) }}" align="right" hspace="0" />
     </div>
 
+    <hr>
+
+        <button type="button"  class = "button button1" onclick="history.back()">Go Back!</button>
     
+
 </center>
 
 </body>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Face Detect</title>
+    <title>Fa¢age</title>
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/drag.css')}}">
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/buttons.css')}}">
 
@@ -13,18 +13,17 @@
       <div class="row">
         <div class="col">
 
-    <h1>Face detect </h1>
+    <h1>Face detection </h1>
     <div>
-        Face detection is the first step used by Facelib to perform an analysis on the picture
-        uploaded by the users. It crops out and segments the faces present in the image. It 
-        finds the markers present for each face found in the image and utilizes those later
-        to find the desired outputs.
+        Face detection is the first step used by fa¢age to perform an analysis on the picture
+        uploaded by the users. It crops out and segregates the faces present in the image. It 
+        also finds the markers for each face on the picture.
 
     </div>
           <hr>
 
     
-    <div class="resizable">
+    <div >
         <img src="{{ url_for('send_detection_file', filename=face_segregation) }}" />
     </div>
 
@@ -32,16 +31,34 @@
 
     <h1>Face markers </h1>
     <div>
-        Face markers indicate the position of the eyes, the tip of the nose and 
-        the left and right end of the mouth. Those are used for...
+        Face markers indicate the position of both eyes (if visible), the tip of the nose and 
+        the left and right end of the mouth. Those are used for alignment and enable 
+        correct cropping. 
 
     </div>
 
-    <div class="resizable">
+    <div >
         <img src="{{ url_for('send_detection_file', filename=face_markers) }}" />
     </div>
 
+    <hr>
+    <h1>The NN architecture used</h1>
+    <div>        
+        Face segmentation is created with a pretrained MobileNet, architectures that as the name suggests, has
+        mobile and embedded vision applications in mind. MobileNets are based on a streamlined architecture that
+        uses depth-wise separable convolutions to build light weight deep NN. They efficiently trade off between
+        <strong>latency</strong> and <strong>accuracy</strong> allowing in consequence the model builder to choose the right sized model for their
+        application based on the constraints of the problem. It is the case that the backbone library
+        used for this webapp has identical capabilities in real-time video.  
+
+    </div>
+
+    <hr>
     
+    <form>
+        <input type="button" value="Go back!" class = "button button1" onclick="history.back()">
+    </form>
+
 </center>
 </body>
 <script  src="{{ url_for('static', filename='js/drag.js')}}" data-turbolinks-track="reload"></script>

@@ -17,8 +17,10 @@
 
     <h1>Face Detect & A.G.E. estimation</h1>
     <div >
-      Upload any picture and predict age, gender, emotion of humans on it. The picture format or size can be whatever you please. On top of that check on the Face Detect, to inform yourself about the already trained NeuralNets that are being use to perform this actions. And on top of that why FaceDetection and landmarks are used to predict A.G.E.
-      The picture can contain multiple faces or none. Detection, alignment, age&gender&emotion prediction will be done for all of them. 
+      Upload any picture and predict age, gender, emotion of humans on it. The picture format or size can be whatever you please. 
+      On top of that check on the Face Detect, to inform yourself about the already trained NeuralNets that are being used to perform this
+      actions. And on top of that why FaceDetection and landmarks are used to predict A.G.E. The picture can contain multiple faces or
+      none. Detection, alignment, age&gender&emotion prediction will be done for all of them. 
       
           </div>
           <hr>
@@ -45,9 +47,7 @@
         </div>
     
     <hr>
-    <div>
-      <h1>Facelib analysis </h1>
-    </div>
+
     <div>
       <a href="{{ url_for('send_face_detection_analysis', filename=uploaded_image) }}" class="button button1"> Face Detection</a>
       <a href="{{ url_for('send_age_gender_emotion_analysis', filename=uploaded_image) }}" class="button button2"> Age, Gender & Emotion prediction</a>

@@ -114,7 +114,7 @@ def create_images_age_gender_emotion(faces, ages, genders, emotions, probs):
     c="r"
     plt.rc('font', size=6) #controls default text size
     px = 1/plt.rcParams['figure.dpi']
-    fig, axes = plt.subplots(figsize=(5*faces.shape[0]*100*px, 400*px),ncols=faces.shape[0], nrows=1,subplot_kw=dict(projection='radar'))
+    fig, axes = plt.subplots(figsize=(400*px,5*faces.shape[0]*100*px,),nrows=faces.shape[0], ncols=1,subplot_kw=dict(projection='radar'))
 
     try:
         _ = axes[0]
