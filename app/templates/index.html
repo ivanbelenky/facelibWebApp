@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Face with ID</title>
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/drag.css')}}">
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/buttons.css')}}">
+
+</head>
+<body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+    <h1>Upload Face </h1>
+    <div>
+        This simple webapp utilizes the facelib repository to analyze simple data from pictures
+        uploaded by the user. Thanks to this library, ethnicity and 
+    </div>
+          <hr>
+
+    <form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+              <label>Select image</label>
+              <div class="custom-file">
+                <input type="file" class="button button1" name="image"
+
+    id="image">
+                <label class="button button1" for="image">Select image...</label>
+              </div>
+            </div>
+    <button type="submit" class="button button2">Upload</button>
+    </form>
+
+        </div>
+      </div>
+    </div>
+        <div class="resizable">
+            <img src="{{ url_for('send_uploaded_file', filename=uploaded_image) }}" />
+        </div>
+    
+    <hr>
+    <div>
+      <h1>Facelib analysis </h1>
+    </div>
+    <div>
+      <a href="{{ url_for('send_face_detection_analysis', filename=uploaded_image) }}" class="button button1"> Face Detection</a>
+      <a href="{{ url_for('send_age_gender_emotion_analysis', filename=uploaded_image) }}" class="button button2"> Age, Gender & Emotion prediction</a>
+    </div>
+
+
+  
+    
+</body>
+<script  src="{{ url_for('static', filename='js/drag.js')}}" data-turbolinks-track="reload"></script>
+</html>
+
