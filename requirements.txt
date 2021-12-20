@@ -2,7 +2,6 @@ absl-py==0.14.0
 alabaster==0.7.12
 anyio==2.2.0
 appdirs==1.4.3
-apt-clone==0.2.1
 apturl==0.5.2
 argon2-cffi==20.1.0
 astropy==4.2

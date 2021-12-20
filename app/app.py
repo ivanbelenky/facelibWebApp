@@ -2,11 +2,8 @@ import os
 import sys
 import pickle
 
-
-
 from flask import Flask, redirect, jsonify, request, url_for, render_template, flash
 from flask.helpers import send_from_directory
-
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
@@ -35,6 +32,8 @@ def add_header(r):
     r.headers["Expires"] = "0"
     r.headers['Cache-Control'] = 'public, max-age=0'
     return r
+
+
 
 @app.route("/",methods=['GET','POST'])
 def home():
@@ -85,8 +84,6 @@ def send_A_G_E_file(filename=''):
 
 
 
-
-
 from facelib import FaceDetector,EmotionDetector, AgeGenderEstimator
 import cv2
 
@@ -99,8 +96,6 @@ def get_image_tensor():
     img = cv2.imread(img_path,-1)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
-
-
 
 
 def get_face_detector(model="default"):
@@ -133,7 +128,6 @@ def get_emotion_detector(model="default"):
         return detector
 
 
-
     
 @app.route('/facedetect', methods=['GET'])
 def send_face_detection_analysis():
@@ -155,7 +149,6 @@ def send_face_detection_analysis():
     return render_template("face_detect.html",
         face_segregation = 'face_segregation.svg',
         face_markers = 'face_markers.svg')
-
 
 
 
@@ -188,7 +181,6 @@ def send_age_gender_emotion_analysis():
         estimations='estimations.svg',
         face_segregation='face_segregation.svg')
     
-
 
 
 if __name__ == "__main__":
