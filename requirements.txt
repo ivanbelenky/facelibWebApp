@@ -26,7 +26,6 @@ configobj==5.0.6
 crayons==0.3.0
 cryptography==2.8
 cryptosteganography==0.8.3
-cupshelpers==1.0
 cycler==0.11.0
 dash==2.0.0
 dash-core-components==2.0.0
