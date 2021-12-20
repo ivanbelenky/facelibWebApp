@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Face with ID</title>
+    <title>Face detect</title>
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/drag.css')}}">
     <link rel="stylesheet" media="all" href="{{ url_for('static', filename='styles/buttons.css')}}">
 
@@ -13,11 +13,12 @@
       <div class="row">
         <div class="col">
 
-    <h1>Upload Face </h1>
+    <h1>Face Detect & A.G.E. estimation</h1>
     <div>
-        This simple webapp utilizes the facelib repository to analyze simple data from pictures
-        uploaded by the user. Thanks to this library, ethnicity and 
-    </div>
+      Upload any picture and predict age, gender, emotion of humans on it. The picture format or size can be whatever you please. On top of that check on the Face Detect, to inform yourself about the already trained NeuralNets that are being use to perform this actions. And on top of that why FaceDetection and landmarks are used to predict A.G.E.
+      The picture can contain multiple faces or none. Detection, alignment, age&gender&emotion prediction will be done for all of them. 
+      
+          </div>
           <hr>
 
     <form action="/upload-image" method="POST" enctype="multipart/form-data">
